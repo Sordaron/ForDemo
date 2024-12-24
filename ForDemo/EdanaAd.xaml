@@ -1,0 +1,88 @@
+﻿<Window x:Class="ForDemo.EdanaAd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForDemo"
+        mc:Ignorable="d"
+        Title="EdanaAd" Height="450" Width="800">
+    <Grid Background="#FFBAC8BF">
+        <StackPanel VerticalAlignment ="Center" HorizontalAlignment="Center" Height="434" Width="300" Background="#FF8AB5AA">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,20" VerticalAlignment ="Center" HorizontalAlignment="Center">
+                <TextBlock Height="20" Width="141" Text="Дата создания" >
+
+                </TextBlock>
+                <DatePicker Height="20" Width="130" Name="Login" SelectedDate="{Binding Date_add}">
+
+                </DatePicker>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="141" Text="Дата завершения">
+
+                </TextBlock>
+                <DatePicker Height="20" Width="130" Name="Password" SelectedDate="{Binding Date_re}">
+
+                </DatePicker>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Оборудование">
+
+                </TextBlock>
+                <TextBox Height="20" Width="130" Name="ob" Text="{Binding Oborud}">
+
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Тип неисправности">
+
+                </TextBlock>
+                <TextBox Height="20" Width="130" Name="Type" Text="{Binding Type_neis}">
+
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Клиент">
+
+                </TextBlock>
+                <ComboBox Height="20" Width="130" Name="Cli" SelectedItem="{Binding People}">
+
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Ответственный">
+
+                </TextBlock>
+                <ComboBox Height="20" Width="130" Name="wo" SelectedItem="{Binding People1}">
+
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Статус">
+
+                </TextBlock>
+                <ComboBox Height="20" Width="130" Name="StatusCB" SelectedItem="{Binding Statuses}">
+
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Комментарий">
+
+                </TextBlock>
+                <TextBox Height="20" Width="130" Name="Com" Text="{Binding Comment}">
+
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Height="20" Width="140" Text="Описание проблемы">
+
+                </TextBlock>
+                <TextBox Height="20" Width="130" Name="Di" Text="{Binding Disc}">
+
+                </TextBox>
+            </StackPanel>
+            <Button x:Name="EntB" Height="20" Width="100" Margin="0,20,0,0" Content="Войти" Click="EntB_Click">
+
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

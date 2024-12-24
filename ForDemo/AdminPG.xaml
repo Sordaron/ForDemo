@@ -1,0 +1,75 @@
+﻿<Page x:Class="ForDemo.AdminPG"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ForDemo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1200"
+      Title="AdminPG">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70">
+                
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Width="192" Height="20" Text="Количество выполненых заявок: ">
+
+            </TextBlock>
+            <TextBlock Width="5" Height="5" Name="CouT">
+
+            </TextBlock>
+            <TextBlock Width="192" Height="20" Text="Среднее время выполнения ">
+
+            </TextBlock>
+            <TextBlock Width="134" Height="20" Name="AVGHour">
+
+            </TextBlock>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="DG" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заявки" Binding="{Binding Id}" Width="*">
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Оборудование" Binding="{Binding Oborud}" Width="*">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Тип неисправности" Width="*" Binding="{Binding Type_neis}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Width="*" Binding="{Binding Disc}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Клиент" Width="*" Binding="{Binding People.Login}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Ответственный" Binding="{Binding People1.Login}" Width="*">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Дата приема" Width="*" Binding="{Binding Date_add}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Дата завершения" Width="*" Binding="{Binding Date_re}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" Width="*" Binding="{Binding Statuses.Name}">
+
+                </DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Edit" Content="Изменить" Click="Edit_Click">
+                                
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
